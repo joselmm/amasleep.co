@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+    --color-brand-50: #f0f4fa;
+    --color-brand-100: #e1e9f5;
+    --color-brand-200: #c7d6ed;
+    --color-brand-300: #9eb8e0;
+    --color-brand-400: #6f93cf;
+    --color-brand-500: #5375ba;
+    --color-brand-600: #3f5ca3;
+    --color-brand-700: #344b85;
+    --color-brand-800: #2e406e;
+    --color-brand-900: #2a375c;
+
+    --color-wa-green: #25D366;
+    --color-wa-hover: #1da851;
+
+    --font-sans: 'Inter', sans-serif;
+}
+
+.glass-nav {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, #e1e9f5 0%, #ffffff 50%, #f0f4fa 100%);
+}
+
+.card-shadow {
+    box-shadow: 0 10px 25px -5px rgba(83, 117, 186, 0.1), 0 8px 10px -6px rgba(83, 117, 186, 0.05);
+}
