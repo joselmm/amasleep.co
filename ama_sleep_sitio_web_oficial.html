@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ama Sleep | Euro Espumas - Tu descanso ideal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f4fa',
+                            100: '#e1e9f5',
+                            200: '#c7d6ed',
+                            300: '#9eb8e0',
+                            400: '#6f93cf',
+                            500: '#5375ba', // Primary Brand Blue
+                            600: '#3f5ca3',
+                            700: '#344b85',
+                            800: '#2e406e',
+                            900: '#2a375c',
+                        },
+                        wa: {
+                            green: '#25D366',
+                            hover: '#1da851'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #e1e9f5 0%, #ffffff 50%, #f0f4fa 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(83, 117, 186, 0.1), 0 8px 10px -6px rgba(83, 117, 186, 0.05);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-slate-50 antialiased flex flex-col min-h-screen">
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/573186670769?text=Hola!%20Vengo%20desde%20el%20sitio%20web%20y%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20para%20elegir%20mi%20colch%C3%B3n." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 z-50 bg-wa-green hover:bg-wa-hover text-white p-4 rounded-full shadow-2xl flex items-center gap-3 transition-all duration-300 transform hover:scale-110 group cursor-pointer"
+       aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-in-out font-medium pr-1 text-sm">
+            ¡Chatea con nosotros!
+        </span>
+    </a>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 w-full glass-nav border-b border-brand-100 shadow-sm transition-all duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- BRAND LOGO -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 bg-brand-500 rounded-full flex items-center justify-center p-1.5 shadow-md group-hover:bg-brand-600 transition-colors">
+                        <!-- SVG Logo replicating the crescent moon/eye with lashes and central heart -->
+                        <svg viewBox="0 0 100 100" class="w-full h-full fill-none stroke-white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Outer/Crescent circle boundary -->
+                            <circle cx="50" cy="50" r="44" stroke="white" stroke-width="4"/>
+                            <!-- Inner circle filled with blue and containing heart -->
+                            <circle cx="50" cy="42" r="32" fill="#5375ba" stroke="white" stroke-width="3"/>
+                            <!-- Heart shape in center -->
+                            <path d="M50,48 C50,48 38,36 38,29 C38,24 42,20 47,22 C50,24 50,24 50,24 C50,24 50,24 53,22 C58,20 62,24 62,29 C62,36 50,48 50,48 Z" fill="white" stroke="none"/>
+                            <!-- Eyelashes / Rays below -->
+                            <line x1="32" y1="80" x2="26" y2="88" stroke="white" stroke-width="4"/>
+                            <line x1="41" y1="84" x2="38" y2="93" stroke="white" stroke-width="4"/>
+                            <line x1="50" y1="85" x2="50" y2="95" stroke="white" stroke-width="4"/>
+                            <line x1="59" y1="84" x2="62" y2="93" stroke="white" stroke-width="4"/>
+                            <line x1="68" y1="80" x2="74" y2="88" stroke="white" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-black tracking-wider text-brand-600 leading-none">ama</span>
+                        <span class="text-xs font-semibold tracking-widest text-brand-400 uppercase">sleep</span>
+                    </div>
+                </a>
+
+                <!-- DESKTOP MENU -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-brand-500 font-medium transition-colors">Inicio</a>
+                    <a href="#catalogo" class="text-gray-700 hover:text-brand-500 font-medium transition-colors">Productos</a>
+                    <a href="#como-comprar" class="text-gray-700 hover:text-brand-500 font-medium transition-colors">¿Cómo Comprar?</a>
+                    <a href="#nosotros" class="text-gray-700 hover:text-brand-500 font-medium transition-colors">Empresa</a>
+                    <a href="#contacto" class="text-gray-700 hover:text-brand-500 font-medium transition-colors">Contacto</a>
+                </nav>
+
+                <!-- CTA HEADER BUTTON -->
+                <div class="hidden lg:flex items-center">
+                    <a href="https://wa.me/573186670769?text=Hola,%20quisiera%20asesor%C3%ADa%20personalizada%20sobre%20sus%20colchones." 
+                       target="_blank"
+                       class="bg-brand-500 hover:bg-brand-600 text-white font-semibold px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Asesoría Directa</span>
+                    </a>
+                </div>
+
+                <!-- MOBILE MENU BUTTON -->
+                <button id="mobile-menu-btn" class="md:hidden text-brand-700 hover:text-brand-500 focus:outline-none p-2" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE NAV DROPDOWN -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-brand-100 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#inicio" class="block py-2 text-gray-700 hover:text-brand-500 font-medium">Inicio</a>
+            <a href="#catalogo" class="block py-2 text-gray-700 hover:text-brand-500 font-medium">Productos</a>
+            <a href="#como-comprar" class="block py-2 text-gray-700 hover:text-brand-500 font-medium">¿Cómo Comprar?</a>
+            <a href="#nosotros" class="block py-2 text-gray-700 hover:text-brand-500 font-medium">Empresa</a>
+            <a href="#contacto" class="block py-2 text-gray-700 hover:text-brand-500 font-medium">Contacto</a>
+            <a href="https://wa.me/573186670769?text=Hola,%20quisiera%20cotizar%20un%20producto." 
+               target="_blank"
+               class="w-full bg-wa-green text-white text-center font-semibold py-3 rounded-xl shadow flex items-center justify-center gap-2 mt-4">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>Cotizar por WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- HERO SECTION -->
+        <section id="inicio" class="hero-gradient py-12 lg:py-20 overflow-hidden relative border-b border-brand-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 bg-brand-100 text-brand-700 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide uppercase">
+                            <i class="fa-solid fa-bed"></i> Colección Black & White • Euro Espumas
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
+                            TU DESCANSO IDEAL, <br class="hidden sm:inline"/>
+                            <span class="text-brand-500">A UN CLIC DE DISTANCIA</span>
+                        </h1>
+                        <p class="text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                            Diseñados para ofrecer el equilibrio perfecto entre confort, soporte ortopédico y durabilidad. Espumas de alta densidad y resortes de máxima calidad para un sueño reparador.
+                        </p>
+                        
+                        <!-- HERO ACTION BUTTONS -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                            <a href="https://wa.me/573186670769?text=Hola!%20Me%20interesa%20recibir%20informaci%C3%B3n%20y%20cotizar%20un%20colch%C3%B3n%20ama%20sleep." 
+                               target="_blank"
+                               class="w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3 text-lg">
+                                <i class="fa-brands fa-whatsapp text-2xl text-wa-green bg-white rounded-full p-1"></i>
+                                <span>COTIZA POR WHATSAPP AHORA</span>
+                            </a>
+                            <a href="#catalogo" 
+                               class="w-full sm:w-auto bg-white hover:bg-brand-50 text-brand-600 border-2 border-brand-200 font-semibold px-8 py-4 rounded-xl shadow-sm hover:shadow transition-all flex items-center justify-center gap-2">
+                                <span>Ver Catálogo Completo</span>
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </a>
+                        </div>
+
+                        <!-- HIGHLIGHT FEATURES -->
+                        <div class="pt-8 grid grid-cols-3 gap-4 border-t border-brand-200/60 max-w-lg mx-auto lg:mx-0">
+                            <div>
+                                <p class="text-2xl font-black text-brand-600">Hasta 5 años</p>
+                                <p class="text-xs text-gray-500 font-medium">Garantía Directa</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-black text-brand-600">Cassata / Resortes</p>
+                                <p class="text-xs text-gray-500 font-medium">Tecnología Certificada</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-black text-brand-600">Diseño Plegable</p>
+                                <p class="text-xs text-gray-500 font-medium">Opción Tipo Libro</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HERO IMAGE / DISPLAY -->
+                    <div class="lg:col-span-5 relative flex justify-center">
+                        <div class="relative w-full max-w-md bg-white rounded-3xl p-6 shadow-2xl border border-brand-100">
+                            <div class="absolute -top-4 -right-4 bg-brand-500 text-white text-xs font-bold uppercase tracking-wider py-2 px-4 rounded-full shadow-lg">
+                                Destacado
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Colchón Luxury White Ama Sleep" 
+                                 class="rounded-2xl w-full h-64 object-cover mb-4">
+                            <div class="space-y-2">
+                                <span class="bg-brand-50 text-brand-600 text-xs font-bold px-2.5 py-1 rounded-md">Línea Luxury</span>
+                                <h3 class="text-xl font-bold text-gray-900">Colchón Luxury White / Black</h3>
+                                <p class="text-sm text-gray-600">Firmeza que se siente, confort que perdura. Doble Pillow Top & Espuma Cassata.</p>
+                                <div class="pt-2 flex items-center justify-between border-t border-gray-100">
+                                    <span class="text-xs font-semibold text-gray-500"><i class="fa-solid fa-shield-halved text-brand-500"></i> 5 Años Garantía</span>
+                                    <button onclick="openModal('luxury-white')" class="text-brand-500 hover:text-brand-700 font-semibold text-sm flex items-center gap-1">
+                                        Ver detalles <i class="fa-solid fa-chevron-right text-xs"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BANNER DESIGN TIPO LIBRO -->
+        <section class="bg-brand-500 text-white py-8 border-b border-brand-600">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                    <div class="flex items-center gap-4">
+                        <div class="hidden sm:flex bg-white/10 p-4 rounded-2xl">
+                            <i class="fa-solid fa-box-archive text-3xl text-brand-100"></i>
+                        </div>
+                        <div>
+                            <span class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Innovación ama</span>
+                            <h2 class="text-xl sm:text-2xl font-bold mt-1">LA COMODIDAD DE SIEMPRE, AHORA MÁS FÁCIL DE LLEVAR</h2>
+                            <p class="text-brand-100 text-sm">Diseño Tipo Libro Plegable disponible en referencias Deluxe y Luxury. Fácil transporte y acceso a espacios reducidos.</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/573186670769?text=Hola,%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20el%20Dise%C3%B1o%20Plegable%20Tipo%20Libro." 
+                       target="_blank"
+                       class="whitespace-nowrap bg-white text-brand-700 hover:bg-brand-50 font-bold px-6 py-3 rounded-xl shadow transition-colors text-sm">
+                        Consultar Referencias
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATALOG SECTION -->
+        <section id="catalogo" class="py-16 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">NUESTRO PORTAFOLIO DE DESCANSO</h2>
+                    <p class="text-gray-600 mt-3 text-base">
+                        Encuentra el colchón o colchoneta ideal para tus necesidades. Espumas de alta densidad, sistemas ortopédicos de resortes y acabados de lujo.
+                    </p>
+                    
+                    <!-- FILTER BUTTONS -->
+                    <div class="flex flex-wrap items-center justify-center gap-2 mt-8">
+                        <button onclick="filterProducts('todos')" class="filter-btn active bg-brand-500 text-white font-medium px-5 py-2.5 rounded-full text-sm shadow-sm transition-all hover:bg-brand-600">
+                            Todos
+                        </button>
+                        <button onclick="filterProducts('colchones')" class="filter-btn bg-white text-gray-700 hover:bg-brand-50 font-medium px-5 py-2.5 rounded-full text-sm border border-gray-200 transition-all">
+                            Colchones
+                        </button>
+                        <button onclick="filterProducts('colchonetas')" class="filter-btn bg-white text-gray-700 hover:bg-brand-50 font-medium px-5 py-2.5 rounded-full text-sm border border-gray-200 transition-all">
+                            Colchonetas
+                        </button>
+                        <button onclick="filterProducts('black')" class="filter-btn bg-white text-gray-700 hover:bg-brand-50 font-medium px-5 py-2.5 rounded-full text-sm border border-gray-200 transition-all">
+                            Línea Black
+                        </button>
+                        <button onclick="filterProducts('white')" class="filter-btn bg-white text-gray-700 hover:bg-brand-50 font-medium px-5 py-2.5 rounded-full text-sm border border-gray-200 transition-all">
+                            Línea White
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PRODUCT GRID -->
+                <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Products will be generated dynamically by JS -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- HOW TO BUY SECTION -->
+        <section id="como-comprar" class="py-16 bg-white border-y border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-brand-500 font-bold uppercase text-xs tracking-widest">Atención Rápida y Personalizada</span>
+                    <h2 class="text-3xl font-extrabold text-gray-900 mt-1">¿CÓMO COMPRAR TU COLCHÓN?</h2>
+                    <p class="text-gray-600 text-sm mt-2">Comprar con nosotros es muy sencillo. Solo sigue estos 4 pasos y recibe el descanso que te mereces.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-brand-50/50 p-6 rounded-2xl text-center border border-brand-100 relative group hover:bg-brand-50 transition-colors">
+                        <div class="w-14 h-14 bg-brand-500 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-md">
+                            1
+                        </div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-2">Explora</h3>
+                        <p class="text-sm text-gray-600">Revisa nuestro catálogo en el sitio web y selecciona el modelo con el nivel de firmeza que buscas.</p>
+                    </div>
+
+                    <div class="bg-brand-50/50 p-6 rounded-2xl text-center border border-brand-100 relative group hover:bg-brand-50 transition-colors">
+                        <div class="w-14 h-14 bg-wa-green text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-md">
+                            2
+                        </div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-2">Cotiza por WhatsApp</h3>
+                        <p class="text-sm text-gray-600">Haz clic en "Cotizar" en cualquier producto para comunicarte directamente con nuestros asesores.</p>
+                    </div>
+
+                    <div class="bg-brand-50/50 p-6 rounded-2xl text-center border border-brand-100 relative group hover:bg-brand-50 transition-colors">
+                        <div class="w-14 h-14 bg-brand-500 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-md">
+                            3
+                        </div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-2">Confirma</h3>
+                        <p class="text-sm text-gray-600">Te ayudamos a elegir las medidas ideales (100x190, 120x190, 140x190, 160x190, 200x200) y el medio de pago.</p>
+                    </div>
+
+                    <div class="bg-brand-50/50 p-6 rounded-2xl text-center border border-brand-100 relative group hover:bg-brand-50 transition-colors">
+                        <div class="w-14 h-14 bg-brand-500 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-md">
+                            4
+                        </div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-2">Recibe</h3>
+                        <p class="text-sm text-gray-600">Despachamos tu pedido para que empieces a disfrutar de un descanso verdaderamente reparador.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT / COMPANY SECTION -->
+        <section id="nosotros" class="py-16 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-gray-100 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center gap-2 text-brand-500 font-bold text-sm tracking-wider uppercase">
+                            <i class="fa-solid fa-industry"></i> Euro Espumas
+                        </div>
+                        <h2 class="text-3xl font-extrabold text-gray-900">
+                            Respaldo, Calidad y Tecnología en Espumas
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed">
+                            En <strong>ama sleep</strong> nos respaldamos en la trayectoria de <strong>Euro Espumas</strong>, especialistas en la fabricación y comercialización de Espuma Flexible de Poliuretano, Cassata de alta densidad y productos certificados para el descanso.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Cada modelo de nuestro portafolio ha sido meticulosamente estructurado combinando capas de espuma adaptable con soporte extra firme y sistemas ortopédicos para cuidar tu columna.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 pt-4">
+                            <div class="p-4 bg-brand-50 rounded-xl border border-brand-100">
+                                <i class="fa-solid fa-certificate text-brand-500 text-xl mb-1"></i>
+                                <h4 class="font-bold text-gray-900 text-sm">Alta Calidad</h4>
+                                <p class="text-xs text-gray-500">Materiales resistentes de larga durabilidad.</p>
+                            </div>
+                            <div class="p-4 bg-brand-50 rounded-xl border border-brand-100">
+                                <i class="fa-solid fa-truck-fast text-brand-500 text-xl mb-1"></i>
+                                <h4 class="font-bold text-gray-900 text-sm">Envíos Seguros</h4>
+                                <p class="text-xs text-gray-500">Logística ágil y atención personalizada.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=80" 
+                             alt="Fábrica y Confort Euro Espumas" 
+                             class="rounded-2xl shadow-lg w-full h-80 object-cover">
+                        <div class="absolute -bottom-6 -left-6 bg-brand-500 text-white p-6 rounded-2xl shadow-xl hidden sm:block">
+                            <p class="text-2xl font-black">100%</p>
+                            <p class="text-xs text-brand-100">Calidad en descanso garantizada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contacto" class="py-16 bg-white border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    
+                    <div class="space-y-6">
+                        <span class="text-brand-500 font-bold uppercase text-xs tracking-widest">Cotizaciones Directas</span>
+                        <h2 class="text-3xl font-extrabold text-gray-900">¿Tienes dudas o necesitas una medida especial?</h2>
+                        <p class="text-gray-600">
+                            Nuestro equipo está listo para asesorarte en la elección del colchón perfecto según tus necesidades de peso, postura y preferencia de firmeza.
+                        </p>
+
+                        <div class="space-y-4 pt-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-wa-green/10 text-wa-green rounded-xl flex items-center justify-center text-xl">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-semibold text-gray-500 uppercase">Línea Directa / WhatsApp</p>
+                                    <a href="https://wa.me/573186670769" target="_blank" class="text-lg font-bold text-gray-900 hover:text-brand-500">
+                                        318 667 07 69
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-brand-50 text-brand-500 rounded-xl flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-semibold text-gray-500 uppercase">Correo Electrónico</p>
+                                    <a href="mailto:euroespumas@gmail.com" class="text-lg font-bold text-gray-900 hover:text-brand-500">
+                                        euroespumas@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-brand-50 text-brand-500 rounded-xl flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-building"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-semibold text-gray-500 uppercase">Empresa</p>
+                                    <p class="text-base font-bold text-gray-900">Euro Espumas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- QUICK CONTACT CARD WITH WHATSAPP ACTION -->
+                    <div class="bg-brand-50 p-8 rounded-3xl border border-brand-100 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Cotización Inmediata por WhatsApp</h3>
+                            <p class="text-sm text-gray-600 mb-6">
+                                Haz clic en el botón de abajo para iniciar una conversación automatizada con nuestro canal de ventas.
+                            </p>
+                            
+                            <div class="space-y-3 mb-8">
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <i class="fa-solid fa-check-circle text-wa-green text-lg"></i>
+                                    <span>Respuesta rápida y asesoría experta</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <i class="fa-solid fa-check-circle text-wa-green text-lg"></i>
+                                    <span>Precios directos de fábrica</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <i class="fa-solid fa-check-circle text-wa-green text-lg"></i>
+                                    <span>Información detallada de envíos a tu ciudad</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/573186670769?text=Hola,%20me%20gustar%C3%ADa%20recibir%20el%20cat%C3%A1logo%20de%20precios%20y%20asesor%C3%ADa." 
+                           target="_blank" 
+                           class="w-full bg-wa-green hover:bg-wa-hover text-white text-center font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-3 text-base">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>CHATEAR AHORA CON UN ASESOR</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white pt-12 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-gray-800">
+                
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-500 rounded-full flex items-center justify-center p-1">
+                            <svg viewBox="0 0 100 100" class="w-full h-full fill-none stroke-white" stroke-width="4">
+                                <circle cx="50" cy="50" r="44"/>
+                                <circle cx="50" cy="42" r="32" fill="#5375ba"/>
+                                <path d="M50,48 C50,48 38,36 38,29 C38,24 42,20 47,22 C50,24 50,24 50,24 C50,24 50,24 53,22 C58,20 62,24 62,29 C62,36 50,48 50,48 Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <span class="text-2xl font-black tracking-wider text-white">ama <span class="text-brand-300 font-normal">sleep</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm max-w-md">
+                        Euro Espumas - Fabricación y Comercialización de Espuma Flexible de Poliuretano, Cassata y Productos para el descanso de alta calidad.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-4 uppercase tracking-wider">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#catalogo" class="hover:text-white transition-colors">Colchones & Colchonetas</a></li>
+                        <li><a href="#como-comprar" class="hover:text-white transition-colors">¿Cómo Comprar?</a></li>
+                        <li><a href="#nosotros" class="hover:text-white transition-colors">Sobre Euro Espumas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-4 uppercase tracking-wider">Contacto Directo</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><i class="fa-solid fa-phone text-brand-400 mr-2"></i> 318 667 07 69</li>
+                        <li><i class="fa-solid fa-envelope text-brand-400 mr-2"></i> euroespumas@gmail.com</li>
+                        <li><i class="fa-solid fa-shield text-brand-400 mr-2"></i> Productos con Garantía Oficial</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+                <p>&copy; 2026 ama sleep - Euro Espumas. Todos los derechos reservados.</p>
+                <p class="flex items-center gap-1">
+                    Atención principal vía WhatsApp <i class="fa-brands fa-whatsapp text-wa-green"></i>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PRODUCT DETAIL MODAL -->
+    <div id="product-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white w-full max-w-3xl rounded-3xl shadow-2xl overflow-hidden relative animate-fade-in my-8">
+            
+            <!-- CLOSE BUTTON -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 z-10 w-10 h-10 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <div id="modal-content" class="p-6 sm:p-8 max-h-[85vh] overflow-y-auto">
+                <!-- Dynamic Content Loaded via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC & PRODUCTS DATA -->
+    <script>
+        // PRODUCTS DATA BASE FROM PDF CATALOGUE
+        const products = [
+            {
+                id: 'delux-black',
+                name: 'Colchón DELUX BLACK',
+                category: 'colchones',
+                line: 'black',
+                height: '34 cm',
+                warranty: '4 años',
+                pillow: 'Doble Pillow Top',
+                firmness: 'Nivel de Firmeza Adaptable',
+                weight: '110 kg por persona',
+                system: 'Sistema de Resortes Ortopédicos + Espumas Adaptables',
+                description: 'El equilibrio perfecto entre suavidad y soporte. Disfruta la comodidad en ambas caras gracias a su Doble Pillow Top y sistema de resortes.',
+                image: 'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=80',
+                layers: [
+                    'Lámina de Espuma Adaptable (Pillow)',
+                    'Lámina de Espuma de Soporte',
+                    'Sistema de Resortes Ortopédicos',
+                    'Lámina de Espuma de Soporte',
+                    'Lámina de Espuma Adaptable (Pillow)',
+                    'Tela acolchada y transpirable'
+                ],
+                sizes: ['100x190', '120x190', '140x190', '160x190', '200x200'],
+                optionFoldable: true
+            },
+            {
+                id: 'delux-white',
+                name: 'Colchón DELUX WHITE',
+                category: 'colchones',
+                line: 'white',
+                height: '34 cm',
+                warranty: '4 años',
+                pillow: 'Doble Pillow Top',
+                firmness: 'Nivel de Firmeza Adaptable',
+                weight: '110 kg por persona',
+                system: 'Sistema de Resortes Ortopédicos',
+                description: 'Confort superior en ambas caras con un diseño elegante en tono claro. Mayor estabilidad y descanso reparador.',
+                image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80',
+                layers: [
+                    'Lámina de Espuma Adaptable (Pillow)',
+                    'Lámina de Espuma de Soporte',
+                    'Sistema de Resortes Ortopédicos',
+                    'Lámina de Espuma de Soporte',
+                    'Lámina de Espuma Adaptable (Pillow)',
+                    'Tela acolchada y transpirable'
+                ],
+                sizes: ['100x190', '120x190', '140x190', '160x190', '200x200'],
+                optionFoldable: true
+            },
+            {
+                id: 'luxury-black',
+                name: 'Colchón LUXURY BLACK',
+                category: 'colchones',
+                line: 'black',
+                height: '32 cm',
+                warranty: '5 años',
+                pillow: 'Doble Pillow Top',
+                firmness: 'Nivel de Firmeza Firme',
+                weight: '120 kg por persona',
+                system: 'Sistema Extra Firme (Cassata) + Doble Pillow',
+                description: 'Firmeza que se siente, confort que perdura. Su estructura de alta densidad de Cassata ofrece máxima estabilidad y soporte postural.',
+                image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80',
+                layers: [
+                    'Lámina de Espuma Adaptable (Pillow)',
+                    'Lámina de Espuma Extra Firme (Cassata)',
+                    'Lámina de Espuma Adaptable (Pillow)',
+                    'Tejido acolchado y transpirable de alta gama'
+                ],
+                sizes: ['100x190', '120x190', '140x190', '160x190', '200x200'],
+                optionFoldable: true
+            },
+            {
+                id: 'luxury-white',
+                name: 'Colchón LUXURY WHITE',
+                category: 'colchones',
+                line: 'white',
+                height: '32 cm',
+                warranty: '5 años',
+                pillow: 'Doble Pillow Top',
+                firmness: 'Nivel de Firmeza Firme',
+                weight: '120 kg por persona',
+                system: 'Sistema Extra Firme (Cassata)',
+                description: 'Máximo soporte y estabilidad en una presentación blanca sobria. Ideal para quienes buscan durabilidad extrema y firmeza ortopédica.',
+                image: 'https://images.unsplash.com/photo-1629949009765-40fc74c9521a?auto=format&fit=crop&w=800&q=80',
+                layers: [
+                    'Lámina de Espuma Adaptable (Pillow)',
+                    'Lámina de Espuma Extra Firme (Cassata)',
+                    'Lámina de Espuma Adaptable (Pillow)',
+                    'Tejido acolchado y transpirable'
+                ],
+                sizes: ['100x190', '120x190', '140x190', '160x190', '200x200'],
+                optionFoldable: true
+            },
+            {
+                id: 'tempur-black',
+                name: 'Colchón TEMPUR BLACK',
+                category: 'colchones',
+                line: 'black',
+                height: '29 cm',
+                warranty: '3 años',
+                pillow: 'Pillow Top Superior',
+                firmness: 'Nivel de Firmeza Adaptable',
+                weight: '120 kg por persona',
+                system: 'Sistema de Resortes + Espumas Adaptables',
+                description: 'Descansa con el equilibrio perfecto. Combina sistema de resortes con espumas que se adaptan suavemente a la contorno de tu cuerpo.',
+                image: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80',
+                layers: [
+                    'Lámina de Espuma Adaptable (Pillow)',
+                    'Lámina de Espuma de Soporte',
+                    'Sistema de Resortes Ortopédicos',
+                    'Lámina de Espuma de Soporte',
+                    'Tela acolchada y transpirable'
+                ],
+                sizes: ['100x190', '120x190', '140x190', '160x190', '200x200'],
+                optionFoldable: false
+            },
+            {
+                id: 'tempur-white',
+                name: 'Colchón TEMPUR WHITE',
+                category: 'colchones',
+                line: 'white',
+                height: '29 cm',
+                warranty: '3 años',
+                pillow: 'Pillow Top Superior',
+                firmness: 'Nivel de Firmeza Adaptable',
+                weight: '120 kg por persona',
+                system: 'Sistema de Resortes Ortopédicos',
+                description: 'Capa adicional de confort con Pillow Top. Brinda mayor estabilidad y frescura durante toda la noche.',
+                image: 'https://images.unsplash.com/photo-1540518614846-7ede433c5163?auto=format&fit=crop&w=800&q=80',
+                layers: [
+                    'Lámina de Espuma Adaptable (Pillow)',
+                    'Lámina de Espuma de Soporte',
+                    'Sistema de Resortes Ortopédicos',
+                    'Lámina de Espuma de Soporte',
+                    'Tela acolchada y transpirable'
+                ],
+                sizes: ['100x190', '120x190', '140x190', '160x190', '200x200'],
+                optionFoldable: false
+            },
+            {
+                id: 'spyral-black',
+                name: 'Colchón SPYRAL BASIC BLACK',
+                category: 'colchones',
+                line: 'black',
+                height: '25 cm',
+                warranty: '2 años',
+                pillow: 'Tight Top (Acolchado Integrado)',
+                firmness: 'Nivel de Firmeza Adaptable',
+                weight: '90 kg por persona',
+                system: 'Resortes Ortopédicos + Espumas de Soporte',
+                description: 'El equilibrio perfecto para descansar con soporte óptimo a un precio accesible. Espumas de soporte y resortes resistentes.',
+                image: 'https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=800&q=80',
+                layers: [
+                    'Lámina de Espuma de Soporte',
+                    'Sistema de Resortes Ortopédicos',
+                    'Lámina de Espuma de Soporte',
+                    'Tejido acolchado y transpirable'
+                ],
+                sizes: ['100x190', '120x190', '140x190', '160x190', '200x200'],
+                optionFoldable: false
+            },
+            {
+                id: 'basic-pro-white',
+                name: 'Colchón BASIC PRO WHITE',
+                category: 'colchones',
+                line: 'white',
+                height: '24 cm',
+                warranty: '2 años',
+                pillow: 'Tight Top Integrado',
+                firmness: 'Nivel de Firmeza Firme',
+                weight: '90 kg por persona',
+                system: 'Sistema Extra Firme (Cassata)',
+                description: 'Firmeza superior y confort duradero. Ideal para quienes buscan una superficie sólida y resistente para la alineación lumbar.',
+                image: 'https://images.unsplash.com/photo-1582582621959-48d273528920?auto=format&fit=crop&w=800&q=80',
+                layers: [
+                    'Lámina de Espuma Adaptable',
+                    'Lámina de Espuma Extra Firme (Cassata)',
+                    'Lámina de Espuma Adaptable',
+                    'Tejido acolchado y transpirable'
+                ],
+                sizes: ['100x190', '120x190', '140x190', '160x190', '200x200'],
+                optionFoldable: false
+            },
+            {
+                id: 'colchoneta-ama',
+                name: 'Colchoneta Ama',
+                category: 'colchonetas',
+                line: 'white',
+                height: '15 cm',
+                warranty: '1 año',
+                pillow: 'Tight Top Acolchado',
+                firmness: 'Nivel de Firmeza Alta / Firme',
+                weight: '80 kg por persona',
+                system: 'Sistema Extra Firme con Cassata',
+                description: 'Descanso firme y confortable. Brinda el soporte directo necesario para un descanso placentero en espacios prácticos.',
+                image: 'https://images.unsplash.com/photo-1565183997392-2f6f122e5912?auto=format&fit=crop&w=800&q=80',
+                layers: [
+                    'Lámina de Espuma Adaptable',
+                    'Lámina de Espuma Extra Firme (Cassata)',
+                    'Lámina de Espuma Adaptable',
+                    'Tejido acolchado y transpirable'
+                ],
+                sizes: ['100x190', '120x190', '140x190'],
+                optionFoldable: false
+            }
+        ];
+
+        // RENDER PRODUCTS IN GRID
+        function renderProducts(items) {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = '';
+
+            items.forEach(product => {
+                const waMessage = encodeURIComponent(`Hola, quisiera cotizar el ${product.name} (Garantía ${product.warranty}, Altura ${product.height}).`);
+                const waLink = `https://wa.me/573186670769?text=${waMessage}`;
+
+                const cardHtml = `
+                    <div class="bg-white rounded-3xl overflow-hidden card-shadow border border-gray-100 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1">
+                        <div>
+                            <!-- CARD HEADER & IMAGE -->
+                            <div class="relative h-56 overflow-hidden bg-gray-100">
+                                <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                <div class="absolute top-4 left-4 flex flex-col gap-1">
+                                    <span class="bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                                        ${product.height}
+                                    </span>
+                                    ${product.optionFoldable ? '<span class="bg-emerald-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow">Plegable Tipo Libro</span>' : ''}
+                                </div>
+                                <div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm text-brand-700 text-xs font-bold px-3 py-1 rounded-lg shadow">
+                                    <i class="fa-solid fa-shield-halved text-brand-500 mr-1"></i> ${product.warranty}
+                                </div>
+                            </div>
+
+                            <!-- CARD BODY -->
+                            <div class="p-6">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-xs font-semibold uppercase tracking-wider text-brand-500">${product.pillow}</span>
+                                    <span class="text-xs bg-brand-50 text-brand-700 px-2 py-0.5 rounded font-medium">${product.firmness}</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">${product.name}</h3>
+                                <p class="text-sm text-gray-600 line-clamp-2 mb-4">${product.description}</p>
+                                
+                                <div class="text-xs text-gray-500 space-y-1 border-t border-gray-100 pt-3">
+                                    <p><strong class="text-gray-700">Soporte:</strong> ${product.weight}</p>
+                                    <p><strong class="text-gray-700">Sistema:</strong> ${product.system}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD FOOTER BUTTONS -->
+                        <div class="p-6 pt-0 space-y-2">
+                            <a href="${waLink}" target="_blank" class="w-full bg-wa-green hover:bg-wa-hover text-white font-bold py-3 px-4 rounded-xl shadow flex items-center justify-center gap-2 transition-colors text-sm">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>Cotizar por WhatsApp</span>
+                            </a>
+                            <button onclick="openModal('${product.id}')" class="w-full bg-brand-50 hover:bg-brand-100 text-brand-700 font-semibold py-2.5 px-4 rounded-xl text-xs transition-colors">
+                                Ver Ficha Técnica Completa
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += cardHtml;
+            });
+        }
+
+        // FILTER PRODUCTS LOGIC
+        function filterProducts(category) {
+            // Update button styles
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-500', 'text-white');
+                btn.classList.add('bg-white', 'text-gray-700');
+            });
+            event.currentTarget.classList.remove('bg-white', 'text-gray-700');
+            event.currentTarget.classList.add('bg-brand-500', 'text-white');
+
+            if (category === 'todos') {
+                renderProducts(products);
+            } else if (category === 'colchones' || category === 'colchonetas') {
+                const filtered = products.filter(p => p.category === category);
+                renderProducts(filtered);
+            } else if (category === 'black' || category === 'white') {
+                const filtered = products.filter(p => p.line === category);
+                renderProducts(filtered);
+            }
+        }
+
+        // OPEN MODAL WITH PRODUCT DETAILS
+        function openModal(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const modalContent = document.getElementById('modal-content');
+            const waMessage = encodeURIComponent(`Hola, quisiera solicitar cotización y asesoría personalizada sobre el ${product.name}.`);
+            const waLink = `https://wa.me/573186670769?text=${waMessage}`;
+
+            modalContent.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                    <div>
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-cover rounded-2xl shadow-md mb-4">
+                        <div class="bg-brand-50 p-4 rounded-2xl border border-brand-100 space-y-2">
+                            <h4 class="font-bold text-brand-800 text-sm">Medidas Disponibles:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                ${product.sizes.map(s => `<span class="bg-white border border-brand-200 text-brand-700 text-xs font-semibold px-2.5 py-1 rounded-md shadow-sm">${s} cm</span>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex items-center justify-between">
+                                <span class="bg-brand-100 text-brand-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase">${product.pillow}</span>
+                                <span class="text-xs font-bold text-gray-500"><i class="fa-solid fa-shield text-brand-500"></i> ${product.warranty} Garantía</span>
+                            </div>
+                            <h3 class="text-2xl font-extrabold text-gray-900 mt-2">${product.name}</h3>
+                            <p class="text-sm text-gray-600 mt-1">${product.description}</p>
+                        </div>
+
+                        <div class="space-y-2 border-t border-b border-gray-100 py-3 text-sm text-gray-700">
+                            <p><strong>Altura total:</strong> ${product.height}</p>
+                            <p><strong>Nivel de firmeza:</strong> ${product.firmness}</p>
+                            <p><strong>Capacidad de soporte:</strong> ${product.weight}</p>
+                            ${product.optionFoldable ? '<p class="text-emerald-700 font-semibold"><i class="fa-solid fa-book-open mr-1"></i> Disponible en formato Plegable Tipo Libro (Fácil Transporte)</p>' : ''}
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm mb-2">Tecnología y Confort en cada capa:</h4>
+                            <ul class="space-y-1.5 text-xs text-gray-600">
+                                ${product.layers.map(layer => `<li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> ${layer}</li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="pt-2">
+                            <a href="${waLink}" target="_blank" class="w-full bg-wa-green hover:bg-wa-hover text-white font-bold py-3.5 px-4 rounded-xl shadow-md flex items-center justify-center gap-2 text-sm transition-colors">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span>Solicitar Cotización por WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('product-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // CLOSE MODAL
+        function closeModal() {
+            document.getElementById('product-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // MOBILE MENU TOGGLE
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // CLOSE MODAL ON CLICK OUTSIDE
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('product-modal');
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // INITIAL RENDER
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts(products);
+        });
+    </script>
+</body>
+</html>
